@@ -721,8 +721,7 @@ background-color: rgba(46, 47, 66, 0.4);
 opacity: 0;
 visibility: hidden;
 pointer-events: none;
-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .backdrop.is-open {opacity: 1;
@@ -737,7 +736,7 @@ left: 50%;
 width: 408px;
 min-height: 584px;
 box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
-background-color: #fcfcfc;
+background: #fcfcfc;
 border-radius: 4px;
 transform: translate(-50%, -50%);
 transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);}
@@ -746,17 +745,39 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);}
     transform: translate(-50%, -50%) scale(1.5);
 }
 
-.icon-close { 
+.modal-btn { 
     position: absolute;
     top: 24px;
     right: 24px;
     width: 24px;
     height: 24px;
-    background-color: transparent;
-    border: none;
-    border-radius: 100%;
+    border-radius: 50%;
     fill: #e7e9fc;
     stroke-width: 1px;
     stroke: rgba(0, 0, 0, 0.1);
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    background-color: #e7e9fc; 
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0; 
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
 }
+.icon-close {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    color: #2E2F42;}
+
+.modal-btn:hover {
+    background-color: #404bbf;
+border: none;
+}
+
+.modal-btn:focus {background-color: #404bbf;
+    border: none;
+    }
+ .icon-close:hover { fill: #ffffff; }  
+ 
+ .icon-close:focus { fill: #ffffff;}   
+
