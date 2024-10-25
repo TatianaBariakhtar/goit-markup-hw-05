@@ -932,3 +932,7 @@ margin-bottom: 16px;
         .icon-button {
             margin-left: 16px;
         }
+
+        .input-name:focus + svg {
+            fill:  #4D5AE5;
+            }
