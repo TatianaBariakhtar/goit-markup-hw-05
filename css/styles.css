@@ -322,9 +322,9 @@ img {
 
 .hero-title {
     display: block;
-    padding-bottom: 48px;
     max-width: 496px;
     margin: 0 auto;
+    margin-bottom: 48px; 
 }
 
 .hero-button {
@@ -675,6 +675,7 @@ img {
     gap: 16px;
 
 }
+.footer-soc { margin-right: 80px;}
 
 .footer-soc-link {
     width: 40px;
